@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "alex";
+  src: url("alex-ar.ttf");
+}
+@font-face {
+  font-family: "Assyrian";
+  src: url("Assyrian-en.ttf");
+}
+@font-face {
+  font-family: "lifta";
+  src: url("lifta-ar.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-trans--: 0.4s;
+  --main-color: yellow;
+  --main-font-size: 16px;
+}
+* {
+  user-select: none;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 1000px;
+  background: black;
+}
+a,
+li,
+button {
+  text-transform: capitalize;
+  list-style-type: none;
+}
+
+.nv {
+  background: var(--main-color);
+  width: max-content;
+  min-height: 45px;
+  padding: 9px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 43px;
+  transition: var(--main-trans--);
+  z-index: 4;
+  filter: drop-shadow(8px 10px 6px black);
+}
+.nv li {
+  font-family: "Assyrian";
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 9px;
+  transition: var(--main-trans--);
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.nv li:hover {
+  background-color: black;
+  color: yellow;
+}
+
+.hidden {
+  display: none;
+}
+.opc0 {
+  opacity: 0.5;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 14px;
+  align-items: center;
+  border-radius: 20px;
+  transition: var(--main-trans--);
+  position: absolute;
+  left: 5px;
+  top: 50px;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+}
+.col {
+  opacity: 1;
+  z-index: 6;
+}
+.colors span {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 5px;
+  opacity: 0.5;
+  transition: var(--main-trans--);
+}
+.colors span:hover {
+  opacity: 1;
+}
+.colors span:nth-child(1) {
+  background-color: yellow;
+}
+.colors span:nth-child(2) {
+  background-color: red;
+}
+.colors span:nth-child(3) {
+  background-color: blue;
+}
+.colors span:nth-child(4) {
+  background-color: rgb(16, 242, 16);
+}
+.colors span:nth-child(5) {
+  background-color: white;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+#arrow {
+  padding: 5px;
+  background-color: yellow;
+  position: absolute;
+  border-radius: 4px;
+  left: 2px;
+  position: fixed;
+  top: 265px;
+  transition: var(--main-trans--);
+}
+
+.arrowi {
+  transform: translateX(73px);
+  z-index: 6;
+}
+
+#up {
+  position: fixed;
+  right: 5px;
+  bottom: 114px;
+  background-color: beige;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 23px;
+  opacity: 0;
+  z-index: 1;
+  transition: var(--main-trans--);
+}
+.up-1 {
+  opacity: 1 !important;
+  z-index: 6 !important;
+}
+
+.inputs {
+  width: 80%;
+  margin: 35px auto;
+  padding: 30px;
+  background-color: red;
+  text-align: center;
+  border-radius: 54px;
+  corner-shape: squircle;
+}
+.inputs input {
+  width: 80%;
+  padding: 17px;
+  border: none;
+  border-radius: inherit;
+  transition: var(--main-trans--);
+}
+
+.inputs button {
+  font-family: "Assyrian";
+  border: none;
+  border-radius: inherit;
+  corner-shape: inherit;
+  padding: 18px;
+  background-color: rgb(255, 255, 255);
+  transition: var(--main-trans--);
+}
+.inputs button:hover,
+.inputs input:hover {
+  background-color: black;
+  color: white;
+}
+
+#title {
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  font-family: "Assyrian";
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  corner-shape: squircle;
+}
+.notes {
+  background-color: blue;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 33px;
+  corner-shape: squircle;
+}
+.notes p {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: wrap;
+  font-family: "Assyrian";
+  display: flex;
+  justify-content: space-between;
+}
